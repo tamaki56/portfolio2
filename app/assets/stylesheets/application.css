@@ -13,6 +13,31 @@
  *= require_tree .
  *= require_self
  */
+ 
+nav {
+    text-align: center;
+}
+ 
+nav ul {
+    margin: 0 ;
+    padding: 0 ;
+}
+ 
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    width: 10%; /* ここで項目の幅を指定します */
+}
+ 
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+ 
+nav li:hover{
+    border-bottom: 2px solid #FF7A37; /* 下線の太さや色を指定します */
+}
+ 
 .swiper {
   width: 600px;
   height: 300px;
