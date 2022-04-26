@@ -20,7 +20,7 @@
 <% @photos.each do |photo| %>
   <div>
     <div class="balloon5">
-      <div class="faceicon">
+      <div class="faceicon1">
         <%= link_to user_path(photo.user.id) do %>
           <%= image_tag photo.user.get_profile_image(70,70) %>
         <% end %>

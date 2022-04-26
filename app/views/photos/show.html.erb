@@ -1,4 +1,16 @@
-  <p><%= link_to @photo.user.name, user_path(@photo.user.id) %></p>
+<div class="balloon5">
+  <div class="faceicon1">
+    <%= link_to user_path(@photo.user.id) do %>
+      <%= image_tag @photo.user.get_profile_image(70,70) %>
+    <% end %>
+  </div>
+  <div class="name-gr">
+    <div class="name">
+      <p><%= link_to @photo.user.name, user_path(@photo.user.id) %></p>
+    </div>
+  </div>
+</div>
+
   <%= @photo.caption %>
   <%= image_tag @photo.image, size: "300x300" %>
   <% if @photo.user == current_user %>
@@ -11,7 +23,16 @@
   <div>
   <p>コメント件数：<%= @photo.comments.count %></p>
   <% @photo.comments.each do |comment| %>
-    <%= comment.user.name %>
+  <div class="balloon5">
+    <div class="faceicon1">
+      <%= image_tag comment.user.get_profile_image(70,70) %>
+    </div>
+    <div class="name-gr">
+      <div class="name">
+        <p><%= comment.user.name %></p>
+      </div>
+    </div>
+  </div>
     <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
   <% end %>
 </div>
