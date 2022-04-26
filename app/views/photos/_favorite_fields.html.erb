@@ -1,0 +1,16 @@
+<% if user_signed_in? %>
+  <% if !Favorite.exists?(user_id: current_user.id, photo_id: photo.id) %>
+    <%= link_to photo_favorites_path(photo.id), method: :post, remote: true, class:"like-btn" do %>
+      <i class="fas fa-thumbs-up"></i>
+    <% end %>
+    <span class="star-count1"><%= photo.favorites.count %></span>
+  <% else %>
+    <%= link_to photo_favorites_path(photo_id: photo.id, id: photo.favorites[0].id), method: :delete, remote: true, class:"like-btn" do %>
+      <i class="fas fa-thumbs-up"></i>
+    <% end %>
+    <span class="star-count2"><%= photo.favorites.count %></span>
+  <% end %>
+<% else %>
+  <i class="fas fa-thumbs-up"></i>
+  <span class="star-count2"><%= photo.favorites.count %></span>
+<% end %>

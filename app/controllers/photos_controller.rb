@@ -9,10 +9,14 @@ class PhotosController < ApplicationController
     @photo = current_user.photos.new(photo_params)
 
     if @photo.save
-      redirect_to :root
+      redirect_to photo_path(@photo.id)
     else
       render :new
     end
+  end
+
+  def show
+    @photo = Photo.find(params[:id])
   end
 
   private
@@ -20,5 +24,5 @@ class PhotosController < ApplicationController
   def photo_params
     params.require(:photo).permit(:caption, :image)
   end
-  
+
 end
