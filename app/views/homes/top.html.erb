@@ -1,5 +1,4 @@
 
-
 <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">Slide 1</div>
@@ -18,11 +17,10 @@
 
 <%= javascript_pack_tag "swiper/swiper.js" %>
 
-<% current_user.photos.each do |photo| %>
-  <div>
-    <p><%= photo.caption %></p>
-    <%= image_tag photo.image %>
-  </div>
+<% User.all.each do |user| %>
+<div>
+  <%= link_to user.name, user_path(user) %>
+</div>
 <% end %>
 
 
