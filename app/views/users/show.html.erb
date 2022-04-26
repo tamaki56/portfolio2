@@ -17,7 +17,9 @@
 
 <% @user.photos.each do |photo| %>
   <div>
-    <p><%= photo.caption %></p>
+    <%= link_to photo_path(photo.id) do %>
+      <p><%= photo.caption %></p>
+    <% end %>
     <%= image_tag photo.image %>
   </div>
 <% end %>

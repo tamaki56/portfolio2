@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :favorites, dependent: :destroy
+  has_many :comments, dependent: :destroy
   has_many :photos, dependent: :destroy
   has_many :active_relationships, class_name: 'Follow', foreign_key: 'user_id'
   has_many :passive_relationships, class_name: 'Follow', foreign_key: 'target_user_id'
