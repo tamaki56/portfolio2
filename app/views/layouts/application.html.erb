@@ -8,10 +8,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <!--<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />-->
-    <!--<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />-->
-    <!--<link rel="stylesheet" href="dist/css/swiper.css">-->
+    <script src="https://kit.fontawesome.com/ebf2981b1c.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
@@ -23,7 +20,7 @@
 
     <header>
       <nav>
-        <h2>ナビゲーションのタイトル</h2>
+        <h2>TestApp</h2>
         <ul>
           <% if user_signed_in? %>
             <li><%= link_to 'TOP',root_path %></li>
