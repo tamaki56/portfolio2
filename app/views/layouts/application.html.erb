@@ -25,9 +25,14 @@
       <nav>
         <h2>ナビゲーションのタイトル</h2>
         <ul>
-          <li><%= link_to 'TOP',root_path %></li>
-          <li><a href=”#”>ABOUT</a></li>
-          <li> <a href=”#”>CONTACT</a></li>
+          <% if user_signed_in? %>
+            <li><%= link_to 'TOP',root_path %></li>
+            <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to 'TOP',root_path %></li>
+            <li><%= link_to 'SIGNIN',new_user_session_path %></li>
+            <li><%= link_to 'SIGNUP',new_user_registration_path %></li>
+          <% end %>
         </ul>
         </nav>
     </header>
