@@ -1,5 +1,4 @@
-<h1>Homes#top</h1>
-<p>Find me in app/views/homes/top.html.erb</p>
+
 
 <div class="swiper mySwiper">
       <div class="swiper-wrapper">
@@ -18,6 +17,13 @@
     </div>
 
 <%= javascript_pack_tag "swiper/swiper.js" %>
+
+<% current_user.photos.each do |photo| %>
+  <div>
+    <p><%= photo.caption %></p>
+    <%= image_tag photo.image %>
+  </div>
+<% end %>
 
 
 <!--<div class="swiper-container">-->
