@@ -1,7 +1,9 @@
   <p><%= link_to @photo.user.name, user_path(@photo.user.id) %></p>
   <%= @photo.caption %>
   <%= image_tag @photo.image, size: "300x300" %>
-
+  <% if @photo.user == current_user %>
+    <%= link_to 'Destroy',  photo_path(@photo.id), method: :delete, "data-confirm" => "本当に消しますか？" , class: "btn btn-sm btn-danger" %>
+  <% end %>
   <div class='star-btn' id="favorite_<%= @photo.id %>">
     <%= render "favorite_fields", photo: @photo %>
   </div>

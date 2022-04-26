@@ -20,6 +20,13 @@ class PhotosController < ApplicationController
     @comment = Comment.new
   end
 
+    def destroy
+      @photo = Photo.find(params[:id])
+      if @photo.destroy
+        redirect_to user_path(current_user)
+      end
+    end
+
   private
 
   def photo_params

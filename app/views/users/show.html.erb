@@ -20,6 +20,6 @@
     <%= link_to photo_path(photo.id) do %>
       <p><%= photo.caption %></p>
     <% end %>
-    <%= image_tag photo.image %>
+    <%= image_tag photo.image, size: "300x300" %>
   </div>
 <% end %>
