@@ -13,32 +13,76 @@
  *= require_tree .
  *= require_self
  */
- 
+
 nav {
     text-align: center;
 }
- 
+
 nav ul {
     margin: 0 ;
     padding: 0 ;
 }
- 
+
 nav ul li{
     list-style: none;
     display: inline-block;
     width: 10%; /* ここで項目の幅を指定します */
 }
- 
+
 nav ul li a {
     text-decoration: none;
     color: #333;
 }
- 
+
 nav li:hover{
     border-bottom: 2px solid #FF7A37; /* 下線の太さや色を指定します */
 }
- 
+
 .swiper {
   width: 600px;
   height: 300px;
+}
+
+.balloon5 {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+}
+
+.balloon5 .faceicon {
+  float: left;
+  margin-right: -90px;
+  width: 80px;
+}
+
+.balloon5 .faceicon img{
+  width: 100%;
+  height: auto;
+  border: solid 3px #D3D3D3;
+  border-radius: 50%;
+}
+
+.balloon5 .name-gr {
+  width: 100%;
+}
+
+.name {
+  display: inline-block;
+  position: relative;
+  margin: 5px 0 0 105px;
+  padding: 17px 13px;
+  border-radius: 12px;
+}
+
+.name:after {
+  content: "";
+  display: inline-block;
+  top: 18px;
+  left: -24px;
+  border: 12px solid transparent;
+}
+
+.name p {
+  margin: 0;
+  padding: 0;
 }

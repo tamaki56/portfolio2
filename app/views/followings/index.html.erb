@@ -1,5 +1,14 @@
 <% @followings.each do |following| %>
   <div>
-    <%= link_to following.email, [following] %>
+    <div class="balloon5">
+      <div class="faceicon">
+        <%= image_tag following.get_profile_image(70,70) %>
+      </div>
+      <div class="name-gr">
+        <div class="name">
+          <p><%= link_to following.name, [following] %></p>
+        </div>
+      </div>
+    </div>
   </div>
 <% end%>
