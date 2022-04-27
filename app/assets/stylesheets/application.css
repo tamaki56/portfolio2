@@ -263,8 +263,16 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
 }
 
 .tag-list-contents ul{
   list-style: none;
+}
+
+.tag-show-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
 }
