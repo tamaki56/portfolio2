@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :photos do
     resource :favorites, only: [:create, :destroy]
-    resources :comments, only: [:create]
+    resources :comments, only: [:create, :destroy]
   end
   resources :users do
     resource :follow

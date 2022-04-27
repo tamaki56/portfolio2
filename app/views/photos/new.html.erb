@@ -1,11 +1,13 @@
-<h3>写真投稿</h3>
-
-<%= form_with model: @photo, local: true do |f| %>
-  <div>
-    <%= f.file_field :image %>
-  </div>
-  <div>
-    <%= f.text_area :caption %>
-  </div>
-  <%= f.submit %>
-<% end %>
+<div class="photo-new-contents">
+  <h3>写真投稿</h3>
+  
+  <%= form_with model: @photo, local: true do |f| %>
+    <div>
+      <%= f.file_field :image %>
+    </div>
+    <div>
+      <%= f.text_area :caption, rows: '5', placeholder: "コメントをここに" %>
+    </div>
+    <%= f.submit %>
+  <% end %>
+</div>

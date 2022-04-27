@@ -252,3 +252,9 @@ textarea {
     flex-wrap: wrap;
     margin-left: 125px;
 }
+
+.photo-new-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
