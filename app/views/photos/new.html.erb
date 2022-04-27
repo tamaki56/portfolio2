@@ -1,21 +1,30 @@
+<% if @photo.errors.any? %>
+    <%= @photo.errors.count %>errors prohibited this book from being saved:
+    <ul>
+      <% @photo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+<% end %>
+
 <div class="photo-new-contents">
   <h3>写真投稿</h3>
-  
+
   <%= form_with model: @photo, local: true do |f| %>
     <div>
       <%= f.file_field :image %>
     </div>
-    
+
     <div>
       <%= f.text_area :caption, rows: '5', placeholder: "コメントをここに" %>
     </div>
-    
+
     <div>
       <%= f.fields_for :tags do |form| %>
         <%= render 'tag_fields', f: form %>
       <% end %>
     </div>
-    
+
     <%= f.submit %>
   <% end %>
 </div>

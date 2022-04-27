@@ -47,6 +47,8 @@ class Photo < ApplicationRecord
       #   配列追加のようにレコードを渡すことで新規レコード作成が可能
       self.tags << new_photo_tag
     end
-
   end
+  
+  validates :image, presence: true
+  validates :caption, presence: true, length: { maximum: 200 } #空でない、かつ最大200文字までに設定
 end
