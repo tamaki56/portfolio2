@@ -229,15 +229,17 @@ textarea {
 
 .user-show-content{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 125px;
 }
 
 .photo-items{
-  border-top: 1px solid #D3D3D3;
-  border-bottom: 1px solid #D3D3D3;
+  border: 1px solid #D3D3D3;
   padding: 10px;
   background: #F5F5F5;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 40px;
 }
 
 .photo-item-comment p{
@@ -247,6 +249,6 @@ textarea {
 
 .top-contents{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 125px;
 }
