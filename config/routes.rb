@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'tags/index'
+  get 'tags/show'
   root to: 'homes#top'
   devise_for :users
   resources :photos do
@@ -11,6 +13,6 @@ Rails.application.routes.draw do
     resources :followers
     get :favorites, on: :collection
   end
-  resources :tags, only: %w[index show destroy]
+  resources :tags, only: [:index, :show, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

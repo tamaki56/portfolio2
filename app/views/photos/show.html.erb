@@ -23,7 +23,7 @@
     <% @photo.tags.each do |tag| %>
       <%# タグを展開 %>
       <li>
-        <%= link_to tag.name, tag_path(tag) %>
+        <%= link_to tag.name, tag_path(tag.id) %>
       </li>
     <% end %>
   </ul>
