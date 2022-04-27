@@ -36,10 +36,12 @@
           </div>
         </div>
       </div>
-      <%= link_to photo_path(photo.id) do %>
-        <%= image_tag photo.image, size: "300x300" %>
-      <% end %>
-      <p><%= photo.caption %></p>
+      <div class="photo-item-comment">
+        <%= link_to photo_path(photo.id) do %>
+          <%= image_tag photo.image, size: "300x300" %>
+        <% end %>
+        <p><%= photo.caption %></p>
+      </div>
     </div>
   <% end %>
 </div>

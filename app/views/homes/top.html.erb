@@ -17,23 +17,27 @@
 
 <%= javascript_pack_tag "swiper/swiper.js" %>
 
-<% @photos.each do |photo| %>
-  <div>
-    <div class="balloon5">
-      <div class="faceicon1">
-        <%= link_to user_path(photo.user.id) do %>
-          <%= image_tag photo.user.get_profile_image(70,70) %>
-        <% end %>
-      </div>
-      <div class="name-gr">
-        <div class="name">
-          <p><%= link_to photo.user.name, user_path(photo.user.id) %></p>
+<div class="top-contents">
+  <% @photos.each do |photo| %>
+    <div class="photo-items">
+      <div class="balloon5">
+        <div class="faceicon1">
+          <%= link_to user_path(photo.user.id) do %>
+            <%= image_tag photo.user.get_profile_image(70,70) %>
+          <% end %>
+        </div>
+        <div class="name-gr">
+          <div class="name">
+            <p><%= link_to photo.user.name, user_path(photo.user.id) %></p>
+          </div>
         </div>
       </div>
+      <div class="photo-item-comment">
+        <%= link_to photo_path(photo.id) do %>
+          <%= image_tag photo.image, size: "300x300" %>
+        <% end %>
+        <p><%= photo.caption %></p>
+      </div>
     </div>
-    <%= link_to photo_path(photo.id) do %>
-      <%= image_tag photo.image, size: "300x300" %>
-    <% end %>
-    <p><%= photo.caption %></p>
-  </div>
-<% end %>
+  <% end %>
+</div>
