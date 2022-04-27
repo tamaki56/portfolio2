@@ -3,6 +3,7 @@
 
 <h2>Actions --></h2>
 <%= link_to 'Tags List', tags_path %>
+
 <%= link_to 'Delete', tag_path(@tag), method: :delete, data: {confirm: '関連づいた記事のタグが空になりますがタグを削除しますか？'} %>
 
 <h2>Tag --></h2>
