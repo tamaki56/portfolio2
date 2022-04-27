@@ -232,3 +232,10 @@ textarea {
     flex-direction: column;
     align-items: center;
 }
+
+.photo-items{
+  border-top: 3px solid #D3D3D3;
+  border-bottom: 3px solid #D3D3D3;
+  padding: 10px;
+  background: #F5F5F5;
+}
