@@ -9,13 +9,28 @@
 
   <%# タグ名 %>
   <p>#<%= @tag.name %></p>
+</div>
 
   <%# タグに関連付く記事一覧 %>
-  <ul>
+  <div class="user-show-content">
     <% @tag.photos.each do |photo| %>
-      <li>
-        <%= link_to photo.caption, photo_path(photo) %><%= image_tag photo.user.get_profile_image(70,70) %><%= photo.user.name %>
-      </li>
+      <div class="photo-items">
+        <div class="balloon5">
+          <div class="faceicon1">
+            <%= image_tag photo.user.get_profile_image(70,70) %>
+          </div>
+          <div class="name-gr">
+            <div class="name">
+              <%= photo.user.name %>
+            </div>
+          </div>
+        </div>
+        <div class="photo-item-comment">
+          <%= link_to photo_path(photo) do %>
+            <%= image_tag photo.image, size: "300x300" %>
+          <% end %>
+          <p><%= photo.caption %></p>
+        </div>
+      </div>
     <% end %>
-  </ul>
-</div>
+  </div>
