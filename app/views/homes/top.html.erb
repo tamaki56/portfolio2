@@ -31,9 +31,9 @@
         </div>
       </div>
     </div>
-    <p><%= link_to photo.caption, photo_path(photo.id) %></p>
     <%= link_to photo_path(photo.id) do %>
       <%= image_tag photo.image, size: "300x300" %>
     <% end %>
+    <p><%= photo.caption %></p>
   </div>
 <% end %>

@@ -1,44 +1,53 @@
-<div class="balloon5">
-  <div class="faceicon1">
-    <%= link_to user_path(@photo.user.id) do %>
-      <%= image_tag @photo.user.get_profile_image(70,70) %>
-    <% end %>
-  </div>
-  <div class="name-gr">
-    <div class="name">
-      <p><%= link_to @photo.user.name, user_path(@photo.user.id) %></p>
+<div class="photo-show-contents">
+  <div class="balloon52">
+    <div class="faceicon1">
+      <%= link_to user_path(@photo.user.id) do %>
+        <%= image_tag @photo.user.get_profile_image(70,70) %>
+      <% end %>
+    </div>
+    <div class="name-gr">
+      <div class="name">
+        <p><%= link_to @photo.user.name, user_path(@photo.user.id) %></p>
+      </div>
     </div>
   </div>
-</div>
-
-  <%= @photo.caption %>
   <%= image_tag @photo.image, size: "300x300" %>
+  <p><%= @photo.caption %></p>
   <% if @photo.user == current_user %>
     <%= link_to 'Destroy',  photo_path(@photo.id), method: :delete, "data-confirm" => "本当に消しますか？" , class: "btn btn-sm btn-danger" %>
   <% end %>
+
   <div class='star-btn' id="favorite_<%= @photo.id %>">
     <%= render "favorite_fields", photo: @photo %>
   </div>
 
   <div>
-  <p>コメント件数：<%= @photo.comments.count %></p>
-  <% @photo.comments.each do |comment| %>
-  <div class="balloon5">
-    <div class="faceicon1">
-      <%= image_tag comment.user.get_profile_image(70,70) %>
-    </div>
-    <div class="name-gr">
-      <div class="name">
-        <p><%= comment.user.name %></p>
+    <p>コメント件数：<%= @photo.comments.count %></p>
+    <% @photo.comments.each do |comment| %>
+    <div class="balloon51">
+      <div class="faceicon1">
+        <%= image_tag comment.user.get_profile_image(70,70) %>
+      </div>
+      <div class="name-gr">
+        <div class="name">
+          <p><%= comment.user.name %></p>
+        </div>
+      </div>
+      <div class="comment">
+        <p><%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %></p>
       </div>
     </div>
+    <% end %>
   </div>
-    <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
-  <% end %>
-</div>
-<div>
-  <%= form_with model: [@photo, @comment] do |f| %>
-    <%= f.text_area :comment, rows: '5', placeholder: "コメントをここに" %>
-    <%= f.submit "送信する" %>
-  <% end %>
+  <div>
+    <%= form_with model: [@photo, @comment] do |f| %>
+    <div>
+      <%= f.text_area :comment, rows: '5', placeholder: "コメントをここに" %>
+    </div>
+    <div>
+      <%= f.submit "送信する" %>
+    </div>
+    <% end %>
+  </div>
+
 </div>

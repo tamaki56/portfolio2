@@ -45,14 +45,43 @@ nav li:hover{
   height: 300px;
 }
 
-/*icon&name*/
+/*icon&name&comment*/
 .balloon5 {
   width: 100%;
   margin: 1.5em 0;
   overflow: hidden;
 }
 
+.balloon51 {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+  border-top: 3px solid #D3D3D3;
+  border-bottom: 3px solid #D3D3D3;
+  padding: 10px;
+  background: #F5F5F5;
+}
+
+.balloon52 {
+  width: 100%;
+  margin: 1.5em 0;
+  overflow: hidden;
+  padding-left: 850px;
+}
+
 .balloon5 .faceicon {
+  float: left;
+  margin-right: -90px;
+  width: 80px;
+}
+
+.balloon51 .faceicon {
+  float: left;
+  margin-right: -90px;
+  width: 80px;
+}
+
+.balloon52 .faceicon {
   float: left;
   margin-right: -90px;
   width: 80px;
@@ -65,7 +94,33 @@ nav li:hover{
   border-radius: 50%;
 }
 
+.balloon51 .faceicon img{
+  width: 100%;
+  height: auto;
+  border: solid 3px #D3D3D3;
+  border-radius: 50%;
+}
+
+.balloon52 .faceicon img{
+  width: 100%;
+  height: auto;
+  border: solid 3px #D3D3D3;
+  border-radius: 50%;
+}
+
 .balloon5 .faceicon1 {
+  float: left;
+  margin-right: -90px;
+  width: 60px;
+}
+
+.balloon51 .faceicon1 {
+  float: left;
+  margin-right: -90px;
+  width: 60px;
+}
+
+.balloon52 .faceicon1 {
   float: left;
   margin-right: -90px;
   width: 60px;
@@ -78,7 +133,29 @@ nav li:hover{
   border-radius: 50%;
 }
 
+.balloon51 .faceicon1 img{
+  width: 100%;
+  height: auto;
+  border: solid 3px #D3D3D3;
+  border-radius: 50%;
+}
+
+.balloon52 .faceicon1 img{
+  width: 100%;
+  height: auto;
+  border: solid 3px #D3D3D3;
+  border-radius: 50%;
+}
+
 .balloon5 .name-gr {
+  width: 100%;
+}
+
+.balloon51 .name-gr {
+  width: 100%;
+}
+
+.balloon52 .name-gr {
   width: 100%;
 }
 
@@ -101,4 +178,57 @@ nav li:hover{
 .name p {
   margin: 0;
   padding: 0;
+}
+
+.comment{
+  display: inline-block;
+  position: relative;
+  margin: -30px 0 0 105px;
+  padding: 17px 13px;
+  border-radius: 12px;
+}
+
+.comment:after {
+  content: "";
+  display: inline-block;
+  top: 18px;
+  left: -24px;
+  border: 12px solid transparent;
+}
+
+.comment p {
+  margin: 0;
+  padding: 0;
+}
+
+.photo-show-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+  resize: vertical;
+  width:500px;
+  height:140px;
+}
+
+.user-edit-contents{
+    display: flex;
+    margin: 100px;
+    flex-direction: column;
+    padding-left: 510px;
+}
+
+.user-shoe-contents{
+    display: flex;
+    margin: 100px;
+    flex-direction: column;
+    padding-left: 510px;
+}
+
+.user-show-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
