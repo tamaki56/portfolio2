@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     resources :followers
     get :favorites, on: :collection
   end
+  resources :tags, only: %w[index show destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

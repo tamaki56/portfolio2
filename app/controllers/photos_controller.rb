@@ -2,13 +2,14 @@ class PhotosController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    @photo = current_user.photos.new
+    @photo = Photo.new
   end
 
   def create
     @photo = current_user.photos.new(photo_params)
 
     if @photo.save
+      @photo.save_tags(params[:photo][:tags][:tag])
       redirect_to photo_path(@photo.id)
     else
       render :new
@@ -30,7 +31,7 @@ class PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:caption, :image)
+    params.require(:photo).permit(:caption, :image, :tags)
   end
 
 end

@@ -17,6 +17,17 @@
     <%= link_to 'Destroy',  photo_path(@photo.id), method: :delete, "data-confirm" => "本当に消しますか？" , class: "btn btn-sm btn-danger" %>
   <% end %>
 
+  <h3>Tags --></h3>
+  <ul>
+    <%# 該当のPostからアソシエーションでタグを取得 %>
+    <% @photo.tags.each do |tag| %>
+      <%# タグを展開 %>
+      <li>
+        <%= link_to tag.name, tag_path(tag) %>
+      </li>
+    <% end %>
+  </ul>
+
   <div class='star-btn' id="favorite_<%= @photo.id %>">
     <%= render "favorite_fields", photo: @photo %>
   </div>
