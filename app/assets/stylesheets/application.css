@@ -258,3 +258,13 @@ textarea {
     flex-direction: column;
     align-items: center;
 }
+
+.tag-list-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tag-list-contents ul{
+  list-style: none;
+}
