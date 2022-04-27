@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_26_180703) do
+ActiveRecord::Schema.define(version: 2022_04_27_102933) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -68,12 +68,27 @@ ActiveRecord::Schema.define(version: 2022_04_26_180703) do
     t.index ["user_id"], name: "index_follows_on_user_id"
   end
 
+  create_table "photo_tags", force: :cascade do |t|
+    t.bigint "photo_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["photo_id"], name: "index_photo_tags_on_photo_id"
+    t.index ["tag_id"], name: "index_photo_tags_on_tag_id"
+  end
+
   create_table "photos", force: :cascade do |t|
     t.integer "user_id", null: false
     t.text "caption"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_photos_on_user_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -96,5 +111,7 @@ ActiveRecord::Schema.define(version: 2022_04_26_180703) do
   add_foreign_key "favorites", "photos"
   add_foreign_key "favorites", "users"
   add_foreign_key "follows", "users"
+  add_foreign_key "photo_tags", "photos"
+  add_foreign_key "photo_tags", "tags"
   add_foreign_key "photos", "users"
 end
