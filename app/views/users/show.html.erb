@@ -22,7 +22,7 @@
   <%= link_to 'followings', [@user, :followings] %>/<%= link_to 'followers', [@user, :followers] %>
 </div>
 <div class="user-show-content">
-  <% @user.photos.each do |photo| %>
+  <% @photos.each do |photo| %>
     <div class="photo-items">
       <div>
         <div class="balloon5">
