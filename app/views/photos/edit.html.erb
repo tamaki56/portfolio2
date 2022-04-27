@@ -1,0 +1,21 @@
+<div class="photo-new-contents">
+  <h3>写真編集</h3>
+  
+  <%= form_with model: @photo, local: true do |f| %>
+    <div>
+      <%= f.file_field :image %>
+    </div>
+    
+    <div>
+      <%= f.text_area :caption, rows: '5', placeholder: "コメントをここに" %>
+    </div>
+    
+    <div>
+      <%= f.fields_for :tags do |form| %>
+        <%= render 'tag_fields', f: form %>
+      <% end %>
+    </div>
+    
+    <%= f.submit %>
+  <% end %>
+</div>
