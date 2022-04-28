@@ -1,8 +1,6 @@
 
 <div class="tag-show-contents">
   <h3>Actions</h3>
-  <%= link_to 'Tags List', tags_path %>
-
   <%= link_to 'Delete', tag_path(@tag), method: :delete, data: {confirm: '関連づいた記事のタグが空になりますがタグを削除しますか？'} %>
 
   <h3>Tag</h3>
