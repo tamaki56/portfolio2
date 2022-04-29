@@ -28,11 +28,11 @@
         <nav class="nav">
           <ul class="nav-list">
             <% if user_signed_in? %>
-              <li><%= link_to 'TOP',root_path %></li>
-              <li><%= link_to'HOME', user_path(current_user) %></li>
-              <li><%= link_to 'TAGS', tags_path %></li>
-              <li><%=link_to '+', new_photo_path %></li>
-              <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to 'TOP',root_path, class: "a" %></li>
+              <li><%= link_to'HOME', user_path(current_user), class: "a" %></li>
+              <li><%= link_to 'TAGS', tags_path, class: "a" %></li>
+              <li><%=link_to '+', new_photo_path, class: "a" %></li>
+              <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete, class: "a" %></li>
             <% else %>
               <li><%= link_to 'TOP',root_path %></li>
               <li><%= link_to 'SIGNIN',new_user_session_path %></li>

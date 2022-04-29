@@ -364,10 +364,10 @@ textarea {
 
   /*中身*/
   .nav {
-      background-color: #C299FF;
+      background-color: #DCC2FF;
   
   }
-  .nav-list a {
+  .nav-list li .a {
       display: block;
       text-decoration: none;
       color: #fff;
@@ -380,7 +380,8 @@ textarea {
       padding-left: 20px;
   }
   
-  .nav-list li {
+  .nav .nav-list li {
+      display: block;
       margin: 0;
       padding: 10px;
   }
