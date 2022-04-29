@@ -14,6 +14,13 @@
  *= require_self
  */
 
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
 /*nav*/
 nav {
     text-align: center;
@@ -322,6 +329,248 @@ textarea {
   .swiper {
     width: 400px;
     height: 150px;
+  }
+
+  /*icon&name&comment*/
+  .balloon5 {
+    width: 100%;
+    margin: 1.5em 0;
+    overflow: hidden;
+  }
+
+  .balloon51 {
+    width: 100%;
+    margin: 1.5em 0;
+    overflow: hidden;
+    border-top: 3px solid #D3D3D3;
+    border-bottom: 3px solid #D3D3D3;
+    padding: 10px;
+    background: #F5F5F5;
+  }
+
+  .balloon52 {
+    width: 100%;
+    margin: 1.5em 0;
+    overflow: hidden;
+    padding-left: 15px;
+  }
+
+  .balloon5 .faceicon {
+    float: left;
+    margin-right: -90px;
+    width: 80px;
+  }
+
+  .balloon51 .faceicon {
+    float: left;
+    margin-right: -90px;
+    width: 80px;
+  }
+
+  .balloon52 .faceicon {
+    float: left;
+    margin-right: -90px;
+    width: 80px;
+  }
+
+  .balloon5 .faceicon img{
+    width: 100%;
+    height: auto;
+    border: solid 3px #D3D3D3;
+    border-radius: 50%;
+  }
+
+  .balloon51 .faceicon img{
+    width: 100%;
+    height: auto;
+    border: solid 3px #D3D3D3;
+    border-radius: 50%;
+  }
+
+  .balloon52 .faceicon img{
+    width: 100%;
+    height: auto;
+    border: solid 3px #D3D3D3;
+    border-radius: 50%;
+  }
+
+  .balloon5 .faceicon1 {
+    float: left;
+    margin-right: -90px;
+    width: 60px;
+  }
+
+  .balloon51 .faceicon1 {
+  float: left;
+  margin-right: -90px;
+  width: 60px;
+  }
+
+  .balloon52 .faceicon1 {
+    float: left;
+    margin-right: -90px;
+    width: 60px;
+  }
+
+  .balloon5 .faceicon1 img{
+    width: 100%;
+    height: auto;
+    border: solid 3px #D3D3D3;
+    border-radius: 50%;
+  }
+
+  .balloon51 .faceicon1 img{
+    width: 100%;
+    height: auto;
+    border: solid 3px #D3D3D3;
+    border-radius: 50%;
+  }
+
+  .balloon52 .faceicon1 img{
+    width: 100%;
+    height: auto;
+    border: solid 3px #D3D3D3;
+    border-radius: 50%;
+  }
+
+  .balloon5 .name-gr {
+    width: 100%;
+  }
+
+  .balloon51 .name-gr {
+    width: 100%;
+  }
+
+  .balloon52 .name-gr {
+    width: 100%;
+  }
+
+  .name {
+    display: inline-block;
+    position: relative;
+    margin: 5px 0 0 105px;
+    padding: 17px 13px;
+    border-radius: 12px;
+  }
+
+  .name:after {
+    content: "";
+    display: inline-block;
+    top: 18px;
+    left: -24px;
+    border: 12px solid transparent;
+  }
+
+  .name p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .comment{
+    display: inline-block;
+    position: relative;
+    margin: -30px 0 0 105px;
+    padding: 17px 13px;
+    border-radius: 12px;
+  }
+
+  .comment:after {
+    content: "";
+    display: inline-block;
+    top: 18px;
+    left: -24px;
+    border: 12px solid transparent;
+  }
+
+  .comment p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .photo-show-contents{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  textarea {
+    resize: vertical;
+    width:300px;
+    height:100px;
+  }
+
+  .user-edit-contents{
+      display: flex;
+      margin: 100px;
+      flex-direction: column;
+      padding-left: 510px;
+  }
+
+  .user-shoe-contents{
+      display: flex;
+      margin: 55px;
+      flex-direction: column;
+      padding-left: 120px;
+  }
+
+  .user-show-content{
+      display: block;
+      margin-left: 0px;
+  }
+
+  .photo-items{
+    border: 1px solid #D3D3D3;
+    padding: 10px;
+    background: #F5F5F5;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 5px;
+  }
+
+  .photo-item-comment p{
+      border-top: 1px solid #D3D3D3;
+      padding: 10px;
+  }
+
+  .top-contents{
+      display: block;
+      margin-left: 0;
+  }
+
+  .photo-new-contents{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .tag-list-contents{
+      display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+      flex-wrap: wrap;
+      margin-left: 10px;
+      margin-right: 0px;
+  }
+
+  .tag-list-contents ul{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .tag-list-contents li{
+    padding: 10px;
+  }
+
+  .tag-list-contents ul{
+    list-style: none;
+  }
+
+  .tag-show-contents{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
   }
 
 }

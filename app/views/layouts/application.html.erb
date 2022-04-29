@@ -24,8 +24,8 @@
         <ul>
           <% if user_signed_in? %>
             <li><%= link_to 'TOP',root_path %></li>
-            <li><%= link_to'MYPAGE', user_path(current_user) %></li>
-            <li><%= link_to 'TAGLIST', tags_path %></li>
+            <li><%= link_to'HOME', user_path(current_user) %></li>
+            <li><%= link_to 'TAGS', tags_path %></li>
             <li><%=link_to '+', new_photo_path %></li>
             <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></li>
           <% else %>
